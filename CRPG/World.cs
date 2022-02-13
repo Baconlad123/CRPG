@@ -43,6 +43,29 @@ namespace CRPG
         
         }
 
+        public static Location LocationByID(int id)
+        {
+            foreach(Location loc in Locations)
+            {
+                if(loc.ID == id)
+                {
+                    return loc;
+                }
+
+            }
+            return null;
+        }
+
+        public static void ListLocations()
+        {
+            Console.WriteLine("These are the locations of the world");
+            foreach (Location loc in Locations)
+            {
+                Console.WriteLine($"\t{loc.Name}");
+            }
+
+        }
 
     }
+
 }
