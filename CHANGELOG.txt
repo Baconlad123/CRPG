@@ -1,0 +1,24 @@
+﻿Proposed changes for v0.0.3
++ Added CHANGELOG
++ Debug commands
++ Stats for player
++ Inventory
++ Random number generator
++ WhereAmI (similar to look, when we move it tells the description)
++ Shortcut Navigation
++ Location requirement
+
+Version 0.0.3 Completed on 2/17/2022
+
+Proposed changes for v0.0.4
++ Healing after each move
++ Add quests to the system
++ Monster detection
+
+Version 0.0.4 Completed on 2/22/2022 (Twosday)
+
+Proposed changes for v0.0.5
+- Weapon Equipping
+- Attack Engine
+- Last bit of cleanup, abbreviate some of the commands
+- Finish the HELP system
