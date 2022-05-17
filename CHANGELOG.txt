@@ -18,7 +18,7 @@ Proposed changes for v0.0.4
 Version 0.0.4 Completed on 2/22/2022 (Twosday)
 
 Proposed changes for v0.0.5
-- Weapon Equipping
++ Weapon Equipping
 - Attack Engine
 - Last bit of cleanup, abbreviate some of the commands
 - Finish the HELP system

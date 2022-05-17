@@ -116,6 +116,38 @@ namespace CRPG
                         _player.UseWeapon(_player.CurrentWeapon);
                     }
                 }
+            } else if (input.StartsWith("equip "))
+            {
+                _player.UpdateWeapons();
+                string inputWeaponName = input.Substring(6).Trim();
+                if(string.IsNullOrEmpty(inputWeaponName))
+                {
+                    Console.WriteLine("You must enter the name of the weapon you wish to use");
+                }
+                else
+                {
+                    Weapon weaponToEquip = _player.Weapons.SingleOrDefault(x => x.Name.ToLower() == inputWeaponName || x.NamePlural.ToLower() == inputWeaponName);
+
+                    if(weaponToEquip ==  null)
+                    {
+                        Console.WriteLine($"You do not have the weapon {inputWeaponName}");
+                    }
+                    else
+                    {
+                        _player.CurrentWeapon = weaponToEquip;
+                        Console.WriteLine($"You equip your {_player.CurrentWeapon.Name}");
+                    }
+
+                }
+            }
+            else if (input == "weapons")
+            {
+                _player.UpdateWeapons();
+                Console.WriteLine("List of Weapons:");
+                foreach(Weapon w in _player.Weapons)
+                {
+                    Console.WriteLine($"\t{w.Name}");
+                }
             }
 
             else
